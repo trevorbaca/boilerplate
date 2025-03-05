@@ -68,12 +68,12 @@ jobs:
     - name: Install Abjad trevor/dev branch
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        # include -e for access to abjad/scr/prime_parser_tables.py
+        # include -e for access to abjad/scripts/prime_parser_tables.py
         python -m pip install -e /tmp/abjad
 
     - name: Prime parser tables
       run: |
-        /tmp/abjad/scr/prime_parser_tables.py
+        /tmp/abjad/scripts/prime_parser_tables.py
 
     - name: Install rmakers
       run: |
